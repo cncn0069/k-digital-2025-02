@@ -1,0 +1,15 @@
+#headDiv{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    background-color: aqua;
+    width : 20%;
+}
+
+#headDDiv{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+}
