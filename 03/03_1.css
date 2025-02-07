@@ -1,0 +1,130 @@
+*{
+    font-family: "Nanum Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@keyframes bgchange {
+    0% { background-color: violet; }
+    50% { background-color: aqua; }
+    100% { background-color: green; }
+}
+  
+#bodyDDiv{
+   animation-name: bgchange;
+   animation: bgchange 10s ease infinite;
+}
+
+#bodyDDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bodyDiv {
+    background-color: #ccffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
+}
+
+header>nav>ul li {
+    display: inline;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    margin-left: 5px;
+}
+
+
+
+a:hover {
+    background-color: brown;
+    border-radius: 5px;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+header>nav>ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* main 은 div와 h2를 포함하여 column 정렬 */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* section 안에 div와 h2로 나뉨 */
+main>section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 10px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+section>div {
+    display: flex;
+    flex-direction: row;
+}
+
+section>h2 {
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+}
+
+section img {
+    border-radius: 80%;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    padding: 2px;
+}
+
+section img:hover{
+    transform-origin: top left;
+    transform: rotate(30deg);
+}
+
+aside{
+    display: flex;
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    border: 12px;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
