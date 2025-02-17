@@ -1,0 +1,11 @@
+main > div{
+    display: flex;
+    border: 1px dotted gray;
+    margin: 10px;
+    height: 300px;
+}
+
+.inBox > button{
+    display: inline-flex;
+    
+}
