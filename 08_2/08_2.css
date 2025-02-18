@@ -3,9 +3,35 @@ main > div{
     border: 1px dotted gray;
     margin: 10px;
     height: 300px;
+    
 }
 
-.inBox > button{
+main div > section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+}
+
+main div > section div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+section > .inbox{
+    display: flex;
+
+    margin-right: 5px;
+} */
+
+.inBox button{
     display: inline-flex;
-    
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    margin: 15px;
 }

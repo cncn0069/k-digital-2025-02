@@ -1,62 +1,48 @@
-const convert = (s1, s2, txt1, txt2,spa) => {
+const comparison = (input, random) => {
 
-    if(s1.value == "℃")
-    {
-        s2.value = "℉"
-    }else{
-        s2.value = "℃"
+    if (input == random) {
+        return 'good';
+    } else if (input > random) {
+        return 'down';
+    } else {
+        return 'up';
     }
-
-    spa[0].textContent = s1.value;
-    spa[1].textContent = s2.value;
-
-    txt1.value = "";
-    txt2.value = "";
-    txt1.focus();
-
 };
 
+// const comparison = (input,random) => {(input == random?'good':((input > random) ? 'up' : 'down'))}
 
 
-document.addEventListener("DOMContentLoaded",() => {
+document.addEventListener("DOMContentLoaded", () => {
+    let bt = document.querySelector(".inBox button");
+    let ra = Math.floor(Math.random() * 30 + 1);
+    let input = document.querySelector(".inBox input");
+    let img = document.querySelector("div > .inImg img");
+    let reset = document.querySelector(".resetBox");
+    reset.style.display = 'none'
 
-    const sec1 = document.querySelector('#sel1');
-    const sec2 = document.querySelector('#sel2');
+    console.log(ra);
+    // ra = Math.floor(Math.random * 3 + 1);
 
-    const txt1 = document.getElementById('txt1');
-    const txt2 = document.getElementById('txt2');
-    // const txt1 = document.querySelector('.bt2 input:nth-child(1)');
-    // const txt2 = document.querySelector('.bt2 input:nth-child(2)');
-    const spa = document.querySelectorAll('.bt2 span');
+    bt.addEventListener('click', () => {
 
-    //1번 인풋 박스 안의 값을 가져옴
-
-    sec1.addEventListener("change",() =>{
-
-        // let input = txt1.value;
-
-        convert(sec1,sec2,txt1,txt2,spa);
- 
-    });
-
-    sec2.addEventListener("change",() =>{
-        console.log("sec2",sec2.values);
-
-        convert(sec2,sec1,txt1,txt2,spa);
-
-    });
-
-    txt1.addEventListener("input", () =>{
-        if(sec1.value == "℃")
-        {
-            txt2.value = (txt1.value*(9/5) + 32);
-        }else
-        {
-            txt2.value = (txt1.value-32) * (5/9);
+        result = comparison(input.value, ra);
+        img.setAttribute("src", `../img/${result}.png`);
+        if (result == "good") {
+            input.style.display = 'none'
+            bt.style.display = 'none'
+            reset.style.display = 'block'
         }
-    });
 
+    })
 
+    reset.addEventListener('click', () => {
+        ra = Math.floor(Math.random() * 30 + 1);
 
+        input.style.display = 'block';
+        bt.style.display = 'block';
+        reset.style.display = 'none';
+        img.setAttribute("src", `../img/what.png`);
 
+        console.log(ra);
+    })
 });

@@ -1,0 +1,89 @@
+* {
+    font-family: "Nanum Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+header>h2,
+main>nav,
+footer {
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main>nav,
+footer {
+    width: 90%;
+    padding: 40px;
+}
+
+header>h2 {
+    text-align: center;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+
+body>div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 1px solid gray;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+ul>li {
+    list-style: none;
+    padding: 10px 15px;
+    border: 1px dotted gray;
+}
+
+ul>li:hover{
+    background-color: antiquewhite;
+}
+
+footer > ol{
+    display: flex;
+    justify-content: end;
+}
+
+footer >ol li {
+    display: inline-flex;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: aquamarine;
+
+}
+
+footer >ol li:hover, #inflearn:hover{
+    background-color: aqua;
+}
+
+main>nav {
+    border: 1px solid gray;
+}
+
+#inflearn{
+    display: inline-flex;
+    background-color: green;
+}
+
+footer {}

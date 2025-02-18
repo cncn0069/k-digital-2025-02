@@ -1,89 +1,139 @@
-* {
-    font-family: "Nanum Gothic", serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+main{
+    width: 80%;
 }
 
-
-header>h2,
-main>nav,
-footer {
-    width: 90%;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-main>nav,
-footer {
-    width: 90%;
-    padding: 40px;
-}
-
-header>h2 {
-    text-align: center;
-    height: 100px;
-    background-color: black;
-    color: white;
-    font-weight: bold;
-}
-
-
-body>div {
+body{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    border: 1px solid gray;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-a {
-    text-decoration: none;
-}
 
-a:visited{
-    color: black;
-}
 
-ul>li {
-    list-style: none;
-    padding: 10px 15px;
-    border: 1px dotted gray;
-}
-
-ul>li:hover{
-    background-color: antiquewhite;
-}
-
-footer > ol{
+header{
     display: flex;
-    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    margin: 50px;
 }
 
-footer >ol li {
+header >h2{
+    justify-self: center;
+}
+
+header > a {
     display: inline-flex;
-    padding: 5px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+header > a:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+main > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main > h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted gray;
+    width: 100%;
+    height: 60px;
+}
+
+main > h2[mainHeader]{
+    background-color: red;
+}
+
+
+main > #lotto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted gray;
+    width: 100%;
+    height: 300px;
+}
+
+#msg > button{
+    margin-left: 50px;
+}
+#lottoTitle{
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+}
+#lotto > .img{
+    display: flex;
+    width: 300px;
+}
+#lotto > .img > img{
+    margin: 20px;
+}
+
+
+#msg > span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
     margin: 5px;
-    border-radius: 5px;
-    background-color: aquamarine;
-
+    height: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    /* background-color: blue; */
 }
 
-footer >ol li:hover, #inflearn:hover{
-    background-color: aqua;
+#msg .c0{
+    background-color: red;
+    color : white;
 }
 
-main>nav {
-    border: 1px solid gray;
+#msg .c1{
+    background-color: #f7920b;
+    color : white;
 }
 
-#inflearn{
-    display: inline-flex;
-    background-color: green;
+#msg .c2{
+    background-color: #0001ec;
+    color : white;
 }
 
-footer {}
+#msg .c3{
+    background-color: #016201;
+    color : white;
+}
+
+#msg .c4{
+    background-color: #9632f4;
+    color : white;
+}
+
+nav {
+    display: flex;
+    border: 1px solid ;
+}
+footer{
+    display: flex;
+    border: 1px solid ;
+    margin-top: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
