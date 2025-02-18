@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(ra);
     // ra = Math.floor(Math.random * 3 + 1);
 
-    bt.addEventListener('click', () => {
-
+    bt.addEventListener('click', (e) => {
+        e.preventDefault();
+        
         result = comparison(input.value, ra);
         img.setAttribute("src", `../img/${result}.png`);
         if (result == "good") {

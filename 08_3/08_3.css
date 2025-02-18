@@ -1,0 +1,84 @@
+main>div {
+    display: flex;
+    border: 1px dotted gray;
+    margin: 10px;
+    height: 100%;
+
+}
+
+main div>section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+
+.messageBox{
+    display: flex;
+    height: 80px;
+    width: 80px;
+}
+.resetBox{
+    display: flex;
+    height: 30px;
+    width: 70px;
+   
+}
+
+.inBox>div>div {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid;
+    height: 80px;
+    width: 80px;
+}
+
+.inBox>div {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 240px;
+}
+
+.inBox {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    margin: 10px;
+}
+
+main div>section div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+section > .inbox{
+    display: flex;
+
+    margin-right: 5px;
+} */
+
+.inBox button {
+    display: inline-flex;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.inBox img{
+    height: 70px;
+    width: 70px;
+}
