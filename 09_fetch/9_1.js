@@ -1,5 +1,5 @@
 const getFatch  = async () => {
-    let apiKey = "c2a781e45bf34ec71905087d281e0563";
+    let apiKey = "";
     let baseUrl = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
     let url = `${baseUrl}key=${apiKey}&targetDt=20250219`;
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 패치 then은 비동기 방식
 // const getFatch = () => {
 //     console.log("아 !");
-//     let apiKey = "c2a781e45bf34ec71905087d281e0563";
+//     let apiKey = "";
 //     let baseUrl = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?";
 //     let url = `${baseUrl}key=${apiKey}&targetDt=20250219`;
 
