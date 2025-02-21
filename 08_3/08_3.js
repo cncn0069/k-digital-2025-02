@@ -1,75 +1,95 @@
-document.addEventListener("DOMContentLoaded",()=>{
-    let ra;
-    let bts = document.querySelectorAll('.bt');
-    let reset = document.querySelector('.resetBox');
-    let message = document.querySelector('.messageBox');
-    
-    let array = [0,0,0,0,0,0,0,0,1];
+document.addEventListener("DOMContentLoaded",()=>{   
+
+    //버튼
+    let bts = document.querySelectorAll(".inBox .bt");
+    //리셋 버튼
+    let reset = document.querySelector(".resetBox");
+    //메세지 호출
+    let msg = document.querySelector(".messageBox");
+    //주사위 배열생성
+    let dice = new Array(9).fill(0);
+    dice[8] = 1;
+
 
     //전체 카운트
+    let heartValue;
     
     
 
-    for(let [i,c] of bts.entries())
-    {
-        c.innerHTML =  i + 1;
-    }
-
-    //폭탄섞기 버튼이 눌러졌나
-    let resetBoom = false;
-
+    //숫자 넣기
     for(let [i,bt] of bts.entries())
     {
-        bt.addEventListener('click', ()=>{
-            heartValue = document.querySelectorAll('.inBox img')
+        bt.innerHTML = i + 1;
+    }
+    
+    //폭탄섞기 버튼
+    let boomReset = false;
 
-            //폭탄섞기 버튼을
-            if(resetBoom != false)
-            {
-                
-                //폭탄이라면
-                if(array[i] == 1)
+    //버튼별 이벤트 리스너
+    for(let [i,bt] of bts.entries())
+        {
+             //클릭이 발생하였을 때
+            bt.addEventListener("click",() => {
+
+
+                 //하트의 갯수를 저장
+                 heartValue = document.querySelectorAll(".inBox img");
+                //폭탄섞기 버튼을 눌렀다면
+
+                if(boomReset == true)
                     {
-                        if(heartValue.length == 8){
-                            bt.innerHTML ="<img src=\"../img/hart.png\">";
-                            message.innerHTML = '성공!';
+                        //폭탄이라면
+                        if(1 == dice[i])
+                        {
+                            //하트 갯수가 8개라면
+                            if(heartValue.length == 8)
+                            {
+                                bt.innerHTML = `<img src="../img/hart.png">`;
+                                msg.innerHTML = "성공!"
+                                boomReset = false
+                            }else{
+                                bt.innerHTML = `<img src="../img/boom.png">`;
+                                msg.innerHTML = "실패.."
+                                boomReset = false
+                            }
+                           
+                            
                         }else{
-                            bt.innerHTML ="<img src=\"../img/boom.png\">";
-                            message.innerHTML = '실패!';
-                            resetBoom = false;
+                            bt.innerHTML = `<img src="../img/hart.png">`;
+                             msg.innerHTML = "도전!"
                         }
                         
-                    }
-                    else{ 
-                        bt.innerHTML ="<img src=\"../img/hart.png\">";
-                        message.innerHTML = '';
-                    }
-        
-            }else{
-                message.innerHTML = '폭탄섞기 버튼을 누르세요!';
+                {
+                    
+                    
+                }//폭탄이 아니라면
+                //폭탄섞기 버튼을 안 눌렀다면
+                    }  
+                    else{
+                        msg.innerHTML = "섞기 버튼을 누르세요";
+                    } 
+                
+            });
+        }
+ //폭탁 섞기 버튼을 눌렀다면
+    reset.addEventListener("click",() => {
+        boomReset = true;
+        dice.sort(() => (Math.floor(Math.random() - 0.5)));
+        console.log(dice);
+        //숫자 지우기
+        for(let bt of bts)
+            {
+                bt.innerHTML = "";
             }
             
-
-        });
-    }
-
-    reset.addEventListener("click", ()=>{
-        array.sort(()=>Math.random() - 0.5);
-        console.log(array);
-        resetBoom = true;
-
-
-        for(let n = 0;n < array.length ; n++)
-        {
-            bts[n].innerHTML = "";
-        }
- 
-
-    })
-
-
-
+    });
 });
+            
+
+   
+
+        //정열
+        
 //"<img src=\"\">";
 
 

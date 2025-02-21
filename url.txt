@@ -1,0 +1,3 @@
+http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=c2a781e45bf34ec71905087d281e0563&targetDt=20250219
+
+

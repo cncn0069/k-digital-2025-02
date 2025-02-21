@@ -1,0 +1,32 @@
+main .dateDive {
+    display: flex;
+    background-color: rgba(127, 246, 255, 0.418);
+}
+
+main .dateDive input {
+    height: 40px;
+    text-align: center;
+}
+
+main div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    margin: 10px;
+    border: 1px dotted gray;
+}
+
+main{
+
+    height: 800px;
+}
+main .jsonDive{
+    display: flex;
+    height: auto;
+}
+
+main .jsonDive li{
+    list-style: georgian;
+    border: none;
+}
